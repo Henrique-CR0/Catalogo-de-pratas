@@ -89,44 +89,13 @@ input {
 .brand {
   display: flex;
   align-items: center;
-  gap: 11px;
-  min-width: 190px;
+  flex-shrink: 0;
 }
 
-.brand-mark {
-  width: 45px;
-  height: 45px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #d9bd9e;
-  border-radius: 50%;
-  font: italic 24px var(--serif);
-  letter-spacing: -3px;
-  color: var(--brown);
-}
-
-.brand-mark span,
-.brand-name span,
-.footer-brand-copy > span {
-  color: var(--brown);
-}
-
-.brand-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.brand-name {
-  font: 600 24px/1 var(--serif);
-  letter-spacing: -0.8px;
-}
-
-.brand-subtitle {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--muted);
-  font-weight: 700;
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 56px;
 }
 
 .main-nav {
@@ -766,20 +735,10 @@ h2 em {
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-.footer-brand-copy {
-  display: flex;
-  flex-direction: column;
-  font: 500 22px var(--serif);
-}
-
-.footer-brand-copy small {
-  margin-top: 3px;
-  color: var(--muted);
-  font: 700 10px var(--sans);
-  letter-spacing: 1.8px;
+.footer-brand .brand-logo {
+  height: 52px;
 }
 
 .footer-links {
@@ -1012,24 +971,8 @@ input:focus-visible {
     gap: 10px;
   }
 
-  .brand {
-    min-width: 0;
-    gap: 8px;
-  }
-
-  .brand-mark {
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-  }
-
-  .brand-name {
-    font-size: 21px;
-  }
-
-  .brand-subtitle {
-    font-size: 9px;
-    letter-spacing: 1.5px;
+  .brand-logo {
+    height: 44px;
   }
 
   .header-cta {
