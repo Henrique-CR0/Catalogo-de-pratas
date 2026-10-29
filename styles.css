@@ -26,7 +26,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font: 14px var(--sans);
+  font: 16px var(--sans);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -64,7 +64,7 @@ input {
   background: var(--caramel);
   color: #fffaf5;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.7px;
 }
@@ -123,7 +123,7 @@ input {
 }
 
 .brand-subtitle {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 2px;
   color: var(--muted);
   font-weight: 700;
@@ -132,7 +132,7 @@ input {
 .main-nav {
   display: flex;
   gap: 30px;
-  font-size: 11px;
+  font-size: 15px;
   color: #625950;
 }
 
@@ -148,7 +148,7 @@ input {
   padding: 14px 17px;
   background: var(--ink);
   color: #fff;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -203,7 +203,7 @@ input {
 .eyebrow {
   margin: 0 0 20px;
   color: var(--brown);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -232,10 +232,10 @@ h2 em {
 }
 
 .hero-description {
-  max-width: 460px;
+  max-width: 500px;
   margin: 0 0 27px;
   color: #76695e;
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1.95;
 }
 
@@ -252,7 +252,7 @@ h2 em {
   justify-content: center;
   gap: 14px;
   padding: 15px 19px;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 700;
   transition: background 0.2s, color 0.2s;
 }
@@ -265,7 +265,7 @@ h2 em {
 .text-link {
   padding-bottom: 4px;
   border-bottom: 1px solid #b99370;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -277,7 +277,7 @@ h2 em {
   padding-top: 16px;
   border-top: 1px solid #e0cbbb;
   color: #806e5e;
-  font-size: 9px;
+  font-size: 13px;
 }
 
 /* FOTOS DA CAPA */
@@ -338,8 +338,8 @@ h2 em {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 104px;
-  height: 104px;
+  width: 124px;
+  height: 124px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -348,7 +348,7 @@ h2 em {
   border-radius: 50%;
   background: #fffaf4;
   color: #896445;
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 1.3px;
   box-shadow: 0 8px 20px rgba(116, 83, 56, 0.09);
   transform: rotate(8deg);
@@ -357,7 +357,7 @@ h2 em {
 .hero-seal strong {
   margin: 2px 0;
   color: var(--brown);
-  font: italic 29px var(--serif);
+  font: italic 34px var(--serif);
 }
 
 .hero-bottomline {
@@ -368,7 +368,7 @@ h2 em {
   display: flex;
   justify-content: space-between;
   color: #a4876d;
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.8px;
 }
@@ -408,12 +408,12 @@ h2 em {
 
 .benefits strong {
   margin-bottom: 5px;
-  font-size: 11px;
+  font-size: 15px;
 }
 
 .benefits small {
   color: #887b70;
-  font-size: 9px;
+  font-size: 13px;
 }
 
 /* CATÁLOGO */
@@ -443,10 +443,10 @@ h2 em {
 }
 
 .section-intro {
-  max-width: 365px;
+  max-width: 430px;
   margin: 0 0 2px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.9;
 }
 
@@ -461,12 +461,12 @@ h2 em {
 }
 
 .filter-button {
-  padding: 10px 13px;
+  padding: 12px 16px;
   border: 1px solid var(--line);
   border-radius: 2px;
   background: transparent;
   color: #79695d;
-  font-size: 10px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.18s;
 }
@@ -502,7 +502,7 @@ h2 em {
   outline: 0;
   background: transparent;
   color: var(--ink);
-  font-size: 10px;
+  font-size: 15px;
 }
 
 /* CARTÕES DE PRODUTOS */
@@ -519,6 +519,7 @@ h2 em {
 
 .product-image {
   position: relative;
+  cursor: zoom-in;
   display: block;
   overflow: hidden;
   aspect-ratio: 4 / 5;
@@ -542,10 +543,10 @@ h2 em {
   position: absolute;
   top: 9px;
   left: 9px;
-  padding: 7px 8px;
+  padding: 8px 10px;
   background: rgba(252, 249, 245, 0.94);
   color: #75543b;
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.2px;
 }
@@ -573,16 +574,17 @@ h2 em {
   display: flex;
   justify-content: space-between;
   gap: 5px;
+  flex-wrap: wrap;
   margin-top: 13px;
   color: #a38264;
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.8px;
 }
 
 .product-card h3 {
   margin: 9px 0 15px;
-  font: 500 clamp(16px, 1.8vw, 20px)/1.34 var(--serif);
+  font: 500 clamp(18px, 1.9vw, 23px)/1.34 var(--serif);
 }
 
 .product-bottom {
@@ -593,7 +595,7 @@ h2 em {
   padding-top: 11px;
   border-top: 1px solid var(--line);
   color: #81746a;
-  font-size: 9px;
+  font-size: 13px;
 }
 
 .product-bottom > span {
@@ -604,7 +606,7 @@ h2 em {
   padding-bottom: 3px;
   border-bottom: 1px solid #c6a180;
   color: var(--brown);
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -615,7 +617,7 @@ h2 em {
   border-left: 3px solid var(--caramel);
   background: #f5ece3;
   color: #7a6c60;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -626,7 +628,7 @@ h2 em {
   gap: 10px;
   padding: 42px 20px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .empty-state button {
@@ -635,7 +637,7 @@ h2 em {
   border: 0;
   background: var(--caramel);
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -672,7 +674,7 @@ h2 em {
   padding: 9px 11px;
   background: rgba(40, 32, 24, 0.58);
   color: white;
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.3px;
 }
@@ -689,7 +691,7 @@ h2 em {
   max-width: 490px;
   margin: 22px 0;
   color: #7b6b5d;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 2;
 }
 
@@ -704,7 +706,7 @@ h2 em {
   padding: 9px 10px;
   border: 1px solid #dfc8b3;
   color: #795f49;
-  font-size: 9px;
+  font-size: 13px;
 }
 
 /* CHAMADA PARA PEDIDOS */
@@ -738,7 +740,7 @@ h2 em {
 .contact-band p:not(.eyebrow) {
   margin: 12px 0 0;
   color: #f0ddcc;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -776,7 +778,7 @@ h2 em {
 .footer-brand-copy small {
   margin-top: 3px;
   color: var(--muted);
-  font: 700 7px var(--sans);
+  font: 700 10px var(--sans);
   letter-spacing: 1.8px;
 }
 
@@ -784,7 +786,7 @@ h2 em {
   display: flex;
   gap: 22px;
   color: #685a4e;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .footer-bottom {
@@ -795,9 +797,113 @@ h2 em {
   padding-top: 15px;
   border-top: 1px solid var(--line);
   color: #a18d7b;
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.2px;
+}
+
+/* JANELA DE AMPLIACAO */
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox {
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  max-height: none;
+  margin: 0;
+  padding: 18px;
+  border: 0;
+  background: rgba(36, 27, 20, 0.94);
+  color: #fffaf5;
+}
+
+.lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox::backdrop {
+  background: rgba(36, 27, 20, 0.94);
+}
+
+.lightbox-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: min(100%, 880px);
+  max-height: 100%;
+  margin: 0;
+}
+
+.lightbox-figure img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 150px);
+  object-fit: contain;
+  background: #f0e7de;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-figure figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  width: 100%;
+}
+
+.lightbox-title {
+  font: 500 clamp(19px, 2.4vw, 26px)/1.25 var(--serif);
+}
+
+.lightbox-button,
+.lightbox-nav {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 250, 245, 0.5);
+  border-radius: 50%;
+  background: rgba(36, 27, 20, 0.55);
+  color: #fffaf5;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lightbox-button:hover,
+.lightbox-nav:hover {
+  background: var(--brown);
+}
+
+.lightbox-button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 48px;
+  height: 48px;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  width: 52px;
+  height: 52px;
+  margin-top: -26px;
+  padding-bottom: 4px;
+}
+
+.lightbox-prev {
+  left: 14px;
+}
+
+.lightbox-next {
+  right: 14px;
 }
 
 /* ACESSIBILIDADE */
@@ -844,11 +950,13 @@ input:focus-visible {
 
 @media (max-width: 980px) {
   .site-header {
-    padding-inline: 22px;
+    padding-inline: 18px;
+    gap: 14px;
   }
 
   .main-nav {
-    gap: 18px;
+    gap: 16px;
+    font-size: 14px;
   }
 
   .hero {
@@ -894,7 +1002,7 @@ input:focus-visible {
 
 @media (max-width: 700px) {
   .announcement {
-    font-size: 8px;
+    font-size: 11px;
     letter-spacing: 1px;
   }
 
@@ -920,7 +1028,7 @@ input:focus-visible {
   }
 
   .brand-subtitle {
-    font-size: 7px;
+    font-size: 9px;
     letter-spacing: 1.5px;
   }
 
@@ -929,7 +1037,7 @@ input:focus-visible {
     order: 2;
     padding: 11px 9px;
     gap: 7px;
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .menu-toggle {
@@ -978,7 +1086,7 @@ input:focus-visible {
   }
 
   .hero-description {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .hero-trust {
@@ -1005,9 +1113,9 @@ input:focus-visible {
   }
 
   .hero-seal {
-    width: 90px;
-    height: 90px;
-    font-size: 6px;
+    width: 104px;
+    height: 104px;
+    font-size: 8px;
   }
 
   .hero-seal strong {
@@ -1018,8 +1126,8 @@ input:focus-visible {
     right: 22px;
     bottom: 15px;
     left: 22px;
-    font-size: 6px;
-    letter-spacing: 1px;
+    font-size: 9px;
+    letter-spacing: 0.6px;
   }
 
   .benefits {
@@ -1055,8 +1163,8 @@ input:focus-visible {
   }
 
   .filter-button {
-    padding: 9px 10px;
-    font-size: 9px;
+    padding: 10px 12px;
+    font-size: 13px;
   }
 
   .search-box {
@@ -1071,26 +1179,27 @@ input:focus-visible {
   }
 
   .product-meta {
-    font-size: 6px;
-    letter-spacing: 0.55px;
+    font-size: 10px;
+    letter-spacing: 0.4px;
   }
 
   .product-card h3 {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .product-bottom {
     align-items: flex-start;
-    font-size: 8px;
+    flex-wrap: wrap;
+    font-size: 12px;
   }
 
   .consult-link {
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .image-label {
-    padding: 6px;
-    font-size: 6px;
+    padding: 6px 8px;
+    font-size: 9px;
   }
 
   .about {
@@ -1112,7 +1221,7 @@ input:focus-visible {
   }
 
   .about-copy > p:not(.eyebrow) {
-    font-size: 11px;
+    font-size: 15px;
   }
 
   .contact-band {

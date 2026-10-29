@@ -132,32 +132,121 @@ document
     link.href = createWhatsAppUrl(link.dataset.item);
   });
 
-document
-  .querySelectorAll(".product-image")
-  .forEach((link) => {
-    const card = link.closest(".product-card");
-
-    const itemName =
-      card?.querySelector(".consult-link")?.dataset.item ||
-      card?.dataset.name ||
-      "uma joia";
-
-    link.href = createWhatsAppUrl(itemName);
-  });
-
 /**
  * Links gerais de contato recebem uma mensagem padrão.
  */
 document
   .querySelectorAll('a[href="https://wa.me/5581989914332"]')
   .forEach((link) => {
-    if (
-      !link.classList.contains("consult-link") &&
-      !link.classList.contains("product-image")
-    ) {
+    if (!link.classList.contains("consult-link")) {
       link.href = createWhatsAppUrl();
     }
   });
+
+/**
+ * Janela de ampliação: clicar na foto abre a imagem grande,
+ * com setas para navegar entre as peças que estão na tela.
+ */
+const lightbox = document.querySelector("#lightbox");
+const lightboxImage = document.querySelector("#lightbox-image");
+const lightboxTitle = document.querySelector("#lightbox-title");
+const lightboxCta = document.querySelector("#lightbox-cta");
+
+let lightboxCard = null;
+
+function showLightboxCard(card) {
+  const link = card.querySelector(".product-image");
+  const photo = link.querySelector("img");
+  const itemName = card.querySelector("h3").textContent.trim();
+
+  lightboxCard = card;
+  lightboxImage.src = link.getAttribute("href");
+  lightboxImage.alt = photo.alt;
+  lightboxTitle.textContent = itemName;
+  lightboxCta.href = createWhatsAppUrl(itemName);
+}
+
+function stepLightbox(direction) {
+  const visibleCards = cards.filter((card) => !card.hidden);
+  const index = visibleCards.indexOf(lightboxCard);
+
+  if (visibleCards.length < 2 || index === -1) {
+    return;
+  }
+
+  const next =
+    (index + direction + visibleCards.length) % visibleCards.length;
+
+  showLightboxCard(visibleCards[next]);
+}
+
+if (lightbox && typeof lightbox.showModal === "function") {
+  document
+    .querySelectorAll(".product-image")
+    .forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        showLightboxCard(link.closest(".product-card"));
+        lightbox.showModal();
+        document.body.classList.add("lightbox-open");
+      });
+    });
+
+  document
+    .querySelector("#lightbox-close")
+    ?.addEventListener("click", () => lightbox.close());
+
+  document
+    .querySelector("#lightbox-prev")
+    ?.addEventListener("click", () => stepLightbox(-1));
+
+  document
+    .querySelector("#lightbox-next")
+    ?.addEventListener("click", () => stepLightbox(1));
+
+  // Clicar fora da foto (no fundo escuro) também fecha.
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      lightbox.close();
+    }
+  });
+
+  lightbox.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      stepLightbox(-1);
+    } else if (event.key === "ArrowRight") {
+      stepLightbox(1);
+    }
+  });
+
+  lightbox.addEventListener("close", () => {
+    document.body.classList.remove("lightbox-open");
+  });
+
+  // Arrastar o dedo para os lados troca de foto no celular.
+  let touchStartX = null;
+
+  lightbox.addEventListener(
+    "touchstart",
+    (event) => {
+      touchStartX = event.touches[0].clientX;
+    },
+    { passive: true }
+  );
+
+  lightbox.addEventListener("touchend", (event) => {
+    if (touchStartX === null) {
+      return;
+    }
+
+    const distance = event.changedTouches[0].clientX - touchStartX;
+    touchStartX = null;
+
+    if (Math.abs(distance) > 60) {
+      stepLightbox(distance > 0 ? -1 : 1);
+    }
+  });
+}
 
 /**
  * Menu de navegação para celulares.
