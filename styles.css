@@ -781,6 +781,93 @@ h2 em {
   letter-spacing: 1.2px;
 }
 
+/* PAGINA DA PECA */
+
+.piece-page main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 64px) clamp(18px, 5vw, 48px) 40px;
+}
+
+.piece {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+}
+
+.piece-photo {
+  margin: 0;
+  background: #f0e7de;
+  box-shadow: var(--shadow);
+}
+
+.piece-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.piece-info .eyebrow {
+  margin-bottom: 14px;
+}
+
+.piece-info h1 {
+  margin: 0 0 16px;
+  font: 500 clamp(30px, 4.4vw, 48px)/1.15 var(--serif);
+  letter-spacing: -1px;
+}
+
+.piece-price {
+  margin: 0 0 8px;
+  color: var(--brown);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.piece-note {
+  max-width: 440px;
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.piece-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+
+.piece-link {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #b99370;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.piece-link:hover {
+  color: var(--brown);
+}
+
+.piece-footer {
+  margin: 0;
+  padding: 24px 18px 34px;
+  color: #a18d7b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .piece {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* JANELA DE AMPLIACAO */
 
 body.lightbox-open {

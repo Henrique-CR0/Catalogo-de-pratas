@@ -2,6 +2,9 @@
 
 const WHATSAPP_BASE = "https://wa.me/5581989914332";
 
+// Endereço público do catálogo (troque aqui se o site ganhar domínio próprio).
+const PUBLIC_SITE = "https://henrique-cr0.github.io/Catalogo-de-pratas/";
+
 const cards = [
   ...document.querySelectorAll(".product-card")
 ];
@@ -22,10 +25,18 @@ let activeCategory = "todos";
 /**
  * Cria um link do WhatsApp com uma mensagem personalizada.
  */
-function createWhatsAppUrl(productName = "") {
-  const message = productName
-    ? `Olá! Vi o catálogo da Pratear Lumi e gostaria de consultar a disponibilidade de: ${productName}.`
-    : "Olá! Vim pelo catálogo digital da Pratear Lumi e gostaria de conhecer as peças disponíveis.";
+function createWhatsAppUrl(productName = "", slug = "") {
+  let message =
+    "Olá! Vim pelo catálogo digital da Pratear Lumi e gostaria de conhecer as peças disponíveis.";
+
+  if (productName) {
+    message = `Olá! Vi o catálogo da Pratear Lumi e gostaria de consultar o valor: ${productName}.`;
+
+    // O link da peça faz o WhatsApp mostrar a foto junto da mensagem.
+    if (slug) {
+      message += `\n\n${PUBLIC_SITE}pecas/${slug}.html`;
+    }
+  }
 
   return `${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`;
 }
@@ -129,7 +140,9 @@ resetButton?.addEventListener("click", () => {
 document
   .querySelectorAll(".consult-link[data-item]")
   .forEach((link) => {
-    link.href = createWhatsAppUrl(link.dataset.item);
+    const slug = link.closest(".product-card")?.dataset.slug || "";
+
+    link.href = createWhatsAppUrl(link.dataset.item, slug);
   });
 
 /**
@@ -163,7 +176,7 @@ function showLightboxCard(card) {
   lightboxImage.src = link.getAttribute("href");
   lightboxImage.alt = photo.alt;
   lightboxTitle.textContent = itemName;
-  lightboxCta.href = createWhatsAppUrl(itemName);
+  lightboxCta.href = createWhatsAppUrl(itemName, card.dataset.slug);
 }
 
 function stepLightbox(direction) {
