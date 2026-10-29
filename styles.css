@@ -110,6 +110,33 @@ input {
   color: var(--brown);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-instagram {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d9bd9e;
+  border-radius: 50%;
+  color: var(--brown);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.header-instagram:hover {
+  border-color: var(--brown);
+  background: var(--brown);
+  color: #fff;
+}
+
+.nav-instagram {
+  display: none;
+}
+
 .header-cta {
   display: flex;
   gap: 12px;
@@ -229,13 +256,6 @@ h2 em {
 .button-dark {
   background: var(--ink);
   color: white;
-}
-
-.text-link {
-  padding-bottom: 4px;
-  border-bottom: 1px solid #b99370;
-  font-size: 14px;
-  font-weight: 700;
 }
 
 .hero-trust {
@@ -975,9 +995,20 @@ input:focus-visible {
     height: 44px;
   }
 
-  .header-cta {
+  .header-actions {
     margin-left: auto;
     order: 2;
+  }
+
+  .header-instagram {
+    display: none;
+  }
+
+  .nav-instagram {
+    display: block;
+  }
+
+  .header-cta {
     padding: 11px 9px;
     gap: 7px;
     font-size: 11px;
